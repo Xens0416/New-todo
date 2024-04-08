@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Button } from 'antd';
-import { Input } from 'antd';
+import { CloseCircleFilled } from '@ant-design/icons';
 
 
 const App = () => {
@@ -31,7 +31,7 @@ const App = () => {
             <div className=" text-4xl font-bold items-center text-white pb-5 m-5">To Do List</div>
           
           <div className="p-6 shadow-lg  ">
-            <Input className=" bg-slate-100 border-b-2 border-indigo-600 rounded-md p-4 m-4 " 
+            <input className=" bg-slate-100 border-b-2 border-indigo-600 rounded-md p-4 m-4 " 
             type="text"
             value={task}
             onChange = {(e)=>{
@@ -39,7 +39,7 @@ const App = () => {
             }}
             placeholder="Create a new todo"
             />
-            <Button type="primary" onClick={addTasks} 
+            <Button type="primary" styles={{ height:"100 px"}} onClick={addTasks} 
             className=" bg-indigo-500 text-white font-bold hover:bg-indigo-600">Add Todo</Button>
           
           <div>
@@ -49,8 +49,8 @@ const App = () => {
                       tasks.map((task,index)=>(
                         <div className=" flex bg-slate-100 m-4 py-4 pl-12 pr-4 rounded-md" key={index}>
                           <li className="self-center font-semibold pr-10 mr-6 grow">{task}</li>
-                          <Button type="primary" shape="circle" danger onClick={()=>{deleteTasks(index)}} 
-                          className=" text-white font-bold">x</Button>
+                          <Button icon={<CloseCircleFilled />} type="primary" shape="circle" danger onClick={()=>{deleteTasks(index)}} 
+                          className=" text-white font-bold"></Button>
                         </div>
                       ))
                     }
