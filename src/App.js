@@ -31,7 +31,7 @@ const App = () => {
             <div className=" text-4xl font-bold items-center text-white pb-5 m-5">To Do List</div>
           
           <div className="p-6 shadow-lg  ">
-            <input className=" bg-slate-100 border-b-2 border-indigo-600 rounded-md p-4 m-4 " 
+            <input className=" bg-slate-100 border-b-2 border-indigo-600 rounded-md p-2 m-4 " 
             type="text"
             value={task}
             onChange = {(e)=>{
