@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Checkbox, List, Button, Space, message } from "antd";
+import { Checkbox, List, Button, Space, } from "antd";
 import { CloseOutlined } from '@ant-design/icons';
 
 const App = () => {
@@ -28,7 +28,7 @@ const App = () => {
   const deleteAllCompleted = () => {
     const filteredTasks = tasks.filter((task) => !task.completed);
     setTasks(filteredTasks);
-    message.success("Deleted all completed tasks!");
+
   };
 
   return (
