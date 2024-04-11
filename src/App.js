@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Checkbox, List, Button, Space, message } from "antd";
-import { CloseCircleFilled } from '@ant-design/icons';
+import { CloseOutlined } from '@ant-design/icons';
 
 const App = () => {
   const [tasks, setTasks] = useState([]);
@@ -47,7 +47,7 @@ const App = () => {
               onChange={(e) => setNewTask(e.target.value)}
               placeholder="Create a new todo"
             />
-            <Button type="primary" style={{ height: "55px" }} onClick={addTask} className="bg-indigo-500 text-white font-bold hover:bg-indigo-600">
+            <Button type="primary" style={{ height: "35px" }} onClick={addTask} className="bg-indigo-500 text-white font-bold hover:bg-indigo-600">
               Add Todo
             </Button>
 
@@ -61,7 +61,7 @@ const App = () => {
                       {task.text}
                     </Checkbox>
                     <Space offset={16}>
-                      <Button icon={<CloseCircleFilled />} type="primary" shape="circle" danger onClick={() => deleteTask(index)}>
+                      <Button icon={<CloseOutlined />} type="primary" shape="circle" danger onClick={() => deleteTask(index)}>
                       </Button>
                     </Space>
                   </List.Item>
@@ -70,7 +70,7 @@ const App = () => {
             )}
 
             {tasks.length > 0 && (
-              <Button type="primary" danger size="small" onClick={deleteAllCompleted}>
+              <Button type="primary" danger style={{ height: "35px" }}  onClick={deleteAllCompleted} className=" text-white font-bold"> 
                 Delete All Completed
               </Button>
             )}
